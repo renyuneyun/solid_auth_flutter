@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:fluttersolidauth/models/Constants.dart';
+import 'package:solid_auth_example/models/Constants.dart';
 
 // Widget to setup respostive designs
 class Responsive extends StatelessWidget {

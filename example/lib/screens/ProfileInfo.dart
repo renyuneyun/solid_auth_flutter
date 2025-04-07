@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:fluttersolidauth/models/Constants.dart';
-import 'package:fluttersolidauth/screens/EditProfile.dart';
+import 'package:solid_auth_example/models/Constants.dart';
+import 'package:solid_auth_example/screens/EditProfile.dart';
 
 class ProfileInfo extends StatelessWidget {
   final Map profData; // Profile data

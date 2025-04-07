@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:solid_auth/solid_auth.dart';
 
 // Project imports:
-import 'package:fluttersolidauth/models/Constants.dart';
-import 'package:fluttersolidauth/components/Header.dart';
-import 'package:fluttersolidauth/models/SolidApi.dart';
-import 'package:fluttersolidauth/screens/PrivateScreen.dart';
+import 'package:solid_auth_example/models/Constants.dart';
+import 'package:solid_auth_example/components/Header.dart';
+import 'package:solid_auth_example/models/SolidApi.dart';
+import 'package:solid_auth_example/screens/PrivateScreen.dart';
 
 class EditProfile extends StatefulWidget {
   final Map authData;

@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:fluttersolidauth/screens/LoginScreen.dart';
+import 'package:solid_auth_example/screens/LoginScreen.dart';
 
 void main() {
   runApp(MyApp());

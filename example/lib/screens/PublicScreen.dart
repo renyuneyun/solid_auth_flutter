@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:fluttersolidauth/models/Responsive.dart';
-import 'package:fluttersolidauth/screens/PublicProfile.dart';
+import 'package:solid_auth_example/models/Responsive.dart';
+import 'package:solid_auth_example/screens/PublicProfile.dart';
 
 // ignore: must_be_immutable
 class PublicScreen extends StatelessWidget {

@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:solid_auth/solid_auth.dart';
 
 // Project imports:
-import 'package:fluttersolidauth/models/Constants.dart';
-import 'package:fluttersolidauth/models/Responsive.dart';
-import 'package:fluttersolidauth/screens/LoginScreen.dart';
+import 'package:solid_auth_example/models/Constants.dart';
+import 'package:solid_auth_example/models/Responsive.dart';
+import 'package:solid_auth_example/screens/LoginScreen.dart';
 
 // Widget for the top horizontal bar
 // ignore: must_be_immutable
