@@ -1,3 +1,7 @@
+### 0.1.24
+
+* Update other dependencies
+
 ### 0.1.23
 
 * Bump intl version
