@@ -1,3 +1,10 @@
+# Platform folders can be recreated by flutter create
+android/
+linux/
+macos/
+windows/
+
+
 # Miscellaneous
 *.class
 *.log
