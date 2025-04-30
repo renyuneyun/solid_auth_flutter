@@ -34,11 +34,6 @@ dev_dependencies:
 
   lints: ^5.1.1
 
-# Please explain why this is needed. (gjw 20250429)
-
-# dependency_overrides:
-#   url_launcher_android: "<=6.0.32"
-
 platforms:
   android:
   ios:
