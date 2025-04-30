@@ -1,16 +1,22 @@
-### 0.1.23
+## [0.1.24 20250430]
+
+* Update and cleanup dependencies
+* intl to >=0.19.0
+* Remove overrides
+
+## [0.1.23 20250427]
 
 * Update dependencies
 
-### 0.1.22
+## 0.1.22
 
 * Url launcher code update for Android authentication
 
-### 0.1.21
+## 0.1.21
 
 * Fix dart formatting issues
 
-### 0.1.20
+## 0.1.20
 
 * Fix dart formatting issues
 
