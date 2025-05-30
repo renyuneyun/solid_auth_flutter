@@ -481,7 +481,7 @@ class Flow {
       json = await http.post(client.issuer.tokenEndpoint,
           headers: {
             'Accept': '*/*',
-            'Accept-Encoding': 'gzip, deflate, br',
+            'Accept-Encoding': 'gzip, deflate',
             'DPoP': dPoPToken,
             'content-type': 'application/x-www-form-urlencoded',
             'Authorization': 'Basic $h',
