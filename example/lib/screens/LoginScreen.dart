@@ -216,23 +216,30 @@ class LoginScreen extends StatelessWidget {
               var authData =
                   await authenticate(Uri.parse(_issuerUri), _scopes, context);
 
-              // Decode access token to get the correct webId
-              String accessToken = authData['accessToken'];
-              Map<String, dynamic> decodedToken =
-                  JwtDecoder.decode(accessToken);
-              String webId = decodedToken.containsKey('webid')
-                  ? decodedToken['webid']
-                  : decodedToken['sub'];
+              if (authData.containsKey('error')) {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: const Text('You cancelled the login!'),
+                  duration: const Duration(milliseconds: 3000),
+                ));
+              } else {
+                // Decode access token to get the correct webId
+                String accessToken = authData['accessToken'];
+                Map<String, dynamic> decodedToken =
+                    JwtDecoder.decode(accessToken);
+                String webId = decodedToken.containsKey('webid')
+                    ? decodedToken['webid']
+                    : decodedToken['sub'];
 
-              // Navigate to the profile through main screen
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => PrivateScreen(
-                          authData: authData,
-                          webId: webId,
-                        )),
-              );
+                // Navigate to the profile through main screen
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => PrivateScreen(
+                            authData: authData,
+                            webId: webId,
+                          )),
+                );
+              }
             },
             child: Text(
               'LOGIN',
