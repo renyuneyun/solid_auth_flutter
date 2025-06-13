@@ -219,20 +219,8 @@ Future<Map> authenticate(
     /// If expired then run the refresh token and get a new token and
     /// returns the new token data as a token object
 
-    print('i am here 2');
-
-    print(authResponse.response);
-    print(authResponse.client);
-    print(authResponse.nonce);
-
     var tokenResponse = await authResponse.getTokenResponse();
     String? accessToken = tokenResponse.accessToken;
-
-    print('i am here 3');
-
-    print(tokenResponse);
-
-    print(accessToken);
 
     /// Generate the logout URL
     final _logoutUrl = authResponse.generateLogoutUrl().toString();
