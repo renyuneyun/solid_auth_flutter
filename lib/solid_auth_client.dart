@@ -208,30 +208,36 @@ Future<Map> authenticate(
     authResponse = await authenticator.flow.callback(regResponse);
   }
 
-  /// The following function call first check if the existing access token
-  /// is expired or not.
-  /// If its not expired then returns the token data as a token object
-  /// If expired then run the refresh token and get a new token and
-  /// returns the new token data as a token object
+  /// Check if user cancelled the interaction or there was another unexpected
+  /// error authenticating to the server
+  if ((authResponse.response as Map).containsKey('error')) {
+    authData = authResponse.response as Map;
+  } else {
+    /// The following function call first check if the existing access token
+    /// is expired or not.
+    /// If its not expired then returns the token data as a token object
+    /// If expired then run the refresh token and get a new token and
+    /// returns the new token data as a token object
 
-  var tokenResponse = await authResponse.getTokenResponse();
-  String? accessToken = tokenResponse.accessToken;
+    var tokenResponse = await authResponse.getTokenResponse();
+    String? accessToken = tokenResponse.accessToken;
 
-  /// Generate the logout URL
-  final _logoutUrl = authResponse.generateLogoutUrl().toString();
+    /// Generate the logout URL
+    final _logoutUrl = authResponse.generateLogoutUrl().toString();
 
-  /// Store authentication data
-  authData = {
-    'client': client,
-    'rsaInfo': rsaResults,
-    'authResponse': authResponse,
-    'tokenResponse': tokenResponse,
-    'accessToken': accessToken,
-    'idToken': tokenResponse.idToken,
-    'refreshToken': tokenResponse.refreshToken,
-    'expiresIn': tokenResponse.expiresIn,
-    'logoutUrl': _logoutUrl
-  };
+    /// Store authentication data
+    authData = {
+      'client': client,
+      'rsaInfo': rsaResults,
+      'authResponse': authResponse,
+      'tokenResponse': tokenResponse,
+      'accessToken': accessToken,
+      'idToken': tokenResponse.idToken,
+      'refreshToken': tokenResponse.refreshToken,
+      'expiresIn': tokenResponse.expiresIn,
+      'logoutUrl': _logoutUrl
+    };
+  }
 
   return authData;
 }
