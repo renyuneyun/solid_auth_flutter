@@ -1,3 +1,6 @@
+## [0.1.27 20250626]
+* Repair pointycastle dependency
+
 ## [0.1.26 20250626]
 * Update dependencies
 
