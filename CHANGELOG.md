@@ -1,3 +1,6 @@
+## [0.1.26 20250626]
+* Update dependencies
+
 ## [0.1.25 20250613]
 * Error fix when cancelling the authentication process
 * Update intl package
